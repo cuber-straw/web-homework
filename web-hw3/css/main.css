@@ -1,0 +1,131 @@
+.welcome {
+    display: block;
+    width: 100%;
+    height: 90vh;
+    margin-top: 80px;
+}
+.backdrop {
+    position: absolute;
+    top: 80px;
+    width: 100%;
+    height: 90vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: -4;
+}
+video {
+    position: absolute;
+    top: 80px;
+    z-index: -5;
+    width: 100%;
+    height: 90vh;
+    object-fit: cover;
+}
+.welcome-title {
+    font-size: 75px;
+    color: white;
+    text-align: center;
+    line-height: 80vh;
+    letter-spacing: 4px;
+}
+
+aside {
+    background-color: #5995fd;
+    top: 20vh;
+    position: sticky;
+    height: 60vh;
+    flex: 1;
+    margin-left: 10vw;
+    margin-right: 5vw;
+    margin: 10vw 3vw 0 10vw;
+}
+
+.nav {
+    display: flex;
+    flex-direction: column;
+    margin: 30px 20px;
+}
+
+.nav a {
+    color: white;
+    font-size: large;
+    font-weight: 500;
+    margin: 5px;
+    padding: 10px;
+    text-decoration: none;
+}
+
+a:visited {
+    text-decoration: none;
+}
+
+.content {
+    flex: 3;
+    margin: 10vh 10vw 0 3vw;
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    background-color: #d2d2d2;
+    padding: 0 0 10vh 0;
+    display: flex;
+}
+
+.section {
+    margin: 20px;
+    flex: 1;
+}
+
+.title {
+    width: max-content;
+    margin: 10px auto;
+    font-size: 28px;
+}
+
+.title::after {
+    content: '';
+    display: block;
+    width: 80%;
+    transform: translateX(10%);
+    height: 4px;
+    background-color: #f2bd42;
+    margin-top: 10px;
+}
+
+.images-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin: 20px 0;
+}
+
+.img-wrapper {
+    margin: 40px 20px 20px 20px;
+    background-color: #f2bd42;
+    color: white;
+}
+
+.img-wrapper:hover {
+    box-shadow: 0 0 6px #f2bd42;
+    transition: 0.3s;
+    transform: translateY(-3px);
+    cursor: pointer;
+}
+
+.img-wrapper img {
+    object-fit: cover;
+    height: 220px;
+}
+
+.cat-profile {
+    width: 100%;
+    height: 100%;
+}
+
+.cat-name {
+    text-align: center;
+    height: 40px;
+    line-height: 40px;
+    font-size: 16px;
+    font-weight: 400;
+    text-decoration: none;
+}

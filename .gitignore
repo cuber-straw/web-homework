@@ -1,0 +1,3 @@
+# 忽略所有 node_modules 路径下的文件
+node_modules/
+.DS_store

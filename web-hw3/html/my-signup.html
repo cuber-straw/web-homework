@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../font-awesome-4.7.0/css/font-awesome.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            margin-top: 27vh;
+        }
+
+        .login-form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .login-form h2 {
+            color: rgb(83, 83, 83);
+            font-weight: 900;
+            margin: 18px 0;
+            letter-spacing: 5px;
+        }
+
+        .input-field {
+            height: 2.4em;
+            width: 280px;
+            padding: 0 5px;
+            border-radius: 50px;
+            background-color: #f0f0f0;
+            border: none;
+            margin: 17px 0;
+            box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.2);
+            display: grid;
+            grid-template-columns: 15% 85%;
+            overflow: hidden;
+        }
+
+        .input-field i {
+            color: #acacac;
+            text-align: center;
+            line-height: 2.4em;
+        }
+
+        .input-field input {
+            height: 100%;
+            border: none;
+            outline: none;
+            /* 应对 Chrome 选中后边框变蓝 */
+            background-color: #f0f0f0;
+        }
+
+        .buttons {
+            width: 290px;
+            display: grid;
+            grid-template-columns: 50% 50%;
+        }
+
+        .btn {
+            height: 3.4em;
+            border-radius: 50px;
+            border: none;
+            font-weight: 600;
+            color: #fff;
+            box-shadow: 0 0 4px rgba(0, 0, 0, 0.3);
+            outline: none;
+            margin-top: 30px;
+            transition: 0.2s;
+        }
+
+        .login-form button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+            cursor: pointer;
+        }
+
+        .signup-btn {
+            background-color: #58A55D;
+        }
+
+        .signup-btn:hover {
+            background-color: #4d9452;
+        }
+
+        .login-btn {
+            background-color: #5995fd;
+        }
+
+        .login-btn:hover {
+            background-color: #4d84e2;
+        }
+
+        .btn a {
+            text-decoration: none;
+            color: white;
+            width: 100%;
+            height: 100%;
+            display: block;
+            line-height: 3.4em;
+        }
+        span {
+            height: 3px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="login-form">
+            <h2>注册</h2>
+            <div class="input-field">
+                <i class="fa fa-user"></i>
+                <input type="text" name="username" id="username" placeholder="用户名" />
+            </div>
+            <p style="font-size: 8px; color: red; line-height: 0;">* 用户名仅支持4-18位数字、字母、下划线</p>
+            <div class="input-field">
+                <i class="fa fa-lock"></i>
+                <input type="password" name="password" id="pwd" placeholder="密码" />
+            </div>
+            <p style="font-size: 8px; color: red; line-height: 0;">* 密码仅支持6–20位数字、字母、任意字符</p>
+            <div class="input-field">
+                <i class="fa fa-lock"></i>
+                <input type="password" name="password" id="repwd" placeholder="再次输入密码" />
+            </div>
+            <div class="buttons">
+                <button type="submit" style="margin-right: 8px;" class="login-btn btn">
+                    <a href="./my-login.html">
+                        去登录
+                    </a>
+                </button>
+                <button style="margin-left: 8px;" class="signup-btn btn" id="signup-btn">
+                    注册
+                </button>
+            </div>
+        </div>
+    </div>
+    <script src="../js/register.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,40 @@
+main {
+    margin-top: 80px;
+    padding: 70px 0;
+}
+
+.container {
+    width: 50vw;
+    margin: 20px auto;
+    padding: 0 0 10px 0;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 1);
+}
+
+.name-title {
+    display: inline-block;
+    font-size: 30px;
+    margin-bottom: 8px !important;
+}
+
+h2.name-title::after {
+    content: "";
+    display: block;
+    width: 80%;
+    transform: translateX(10%);
+    height: 3px;
+    background-color: black;
+}
+
+.des-wrapper {
+    margin-left: 20px;
+}
+
+.des-wrapper>* {
+    margin: 18px 30px 18px 10px;
+}
+
+.value {
+    color: #585858;
+    font-size: 15px;
+    margin-top: 2px;
+}
