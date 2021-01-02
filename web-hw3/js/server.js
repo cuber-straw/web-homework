@@ -73,18 +73,14 @@ server.use('/reg', function (req, res) {
     test.then(function (data) {
         user = data
         if (user === undefined) {
-            if (POST.pwd !== POST.repwd) {
-                res.send({ ok: false, msg: '两次密码输入不一致' })
-            } else {
-                const salt = bcrptyjs.genSaltSync(10)
-                const password = bcrptyjs.hashSync(POST.pwd, salt)
-                let arr = []
-                arr.push(POST.name)
-                arr.push(password)
-                arr.push(salt)
-                insert(arr)
-                res.send({ ok: true, msg: '注册成功' })
-            }
+            const salt = bcrptyjs.genSaltSync(10)
+            const password = bcrptyjs.hashSync(POST.pwd, salt)
+            let arr = []
+            arr.push(POST.name)
+            arr.push(password)
+            arr.push(salt)
+            insert(arr)
+            res.send({ ok: true, msg: '注册成功' })
         } else {
             res.send({ ok: false, msg: '用户名已存在' })
         }

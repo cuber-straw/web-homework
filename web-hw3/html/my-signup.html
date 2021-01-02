@@ -13,7 +13,7 @@
         }
 
         .container {
-            margin-top: 27vh;
+            margin-top: 18vh;
         }
 
         .login-form {
@@ -108,6 +108,12 @@
         span {
             height: 3px;
         }
+        .warning {
+            font-size: 8px;
+            color: red;
+            line-height: 0;
+            display: none;
+        }
     </style>
 </head>
 
@@ -117,30 +123,33 @@
             <h2>注册</h2>
             <div class="input-field">
                 <i class="fa fa-user"></i>
-                <input type="text" name="username" id="username" placeholder="用户名" />
+                <input type="text" name="username" id="username" placeholder="用户名" autocomplete="off"/>
             </div>
-            <p style="font-size: 8px; color: red; line-height: 0;">* 用户名仅支持4-18位数字、字母、下划线</p>
+            <p class="warning" id="username-warning">* 用户名仅支持4-18位数字、字母、下划线</p>
             <div class="input-field">
                 <i class="fa fa-lock"></i>
                 <input type="password" name="password" id="pwd" placeholder="密码" />
             </div>
-            <p style="font-size: 8px; color: red; line-height: 0;">* 密码仅支持6–20位数字、字母、任意字符</p>
+            <p class="warning" id="pwd-warning">* 密码仅支持6–20位数字、字母、任意字符</p>
             <div class="input-field">
                 <i class="fa fa-lock"></i>
                 <input type="password" name="password" id="repwd" placeholder="再次输入密码" />
             </div>
+            <p class="warning" id="repwd-warning">* 两次密码输入不一致</p>
+            <div id="v_container" class="input-field" style="grid-template-columns: 15% 48% 37%;"></div>
             <div class="buttons">
                 <button type="submit" style="margin-right: 8px;" class="login-btn btn">
                     <a href="./my-login.html">
                         去登录
                     </a>
                 </button>
-                <button style="margin-left: 8px;" class="signup-btn btn" id="signup-btn">
+                <button style="margin-left: 8px;" class="signup-btn btn" id="signup-btn" disabled="true">
                     注册
                 </button>
             </div>
         </div>
     </div>
+    <script src="../js/gVerify.js"></script>
     <script src="../js/register.js"></script>
 </body>
 

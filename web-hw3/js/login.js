@@ -1,4 +1,12 @@
+let verifyCode = new GVerify('v_container')
+
 function login() {
+    let res = verifyCode.validate(document.getElementById('code_input').value)
+    if (!res) {
+        alert('验证码错误')
+        verifyCode.refresh()
+        return
+    }
     let username = document.getElementById('username').value
     let pwd = document.getElementById('password').value
     let url =
@@ -10,7 +18,7 @@ function login() {
             if (json.ok) {
                 // 页面跳转
                 alert('登录成功')
-                location = 'index.html'
+                location.replace('index.html')
             } else {
                 alert('登录失败: ' + json.msg)
             }
